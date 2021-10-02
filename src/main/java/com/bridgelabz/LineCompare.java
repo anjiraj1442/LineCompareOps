@@ -11,8 +11,22 @@ import java.util.Scanner;
  */
 
 public class LineCompare {
+
+    static void compareTo(Double lineLength1, Double lineLength2) {
+        if (lineLength1 > lineLength2) {
+            System.out.println(" line 1 is greater than line 2");
+
+        } else if (lineLength1 < lineLength2) {
+            System.out.println("line2 is greater than line1");
+
+        } else {
+            System.out.println(" both lines are equal");
+        }
+    }
+
+
     public static void main(String[] args) {
-        System.out.println("Welcome to Line Comparison Problem");
+        System.out.println("Welcome to Line Comparison Computation program");
         Scanner sc = new Scanner(System.in);
         // assigning the lin1 X&Y coordinates
         System.out.println("Enter the X & Y co-ordinates of line1");
@@ -45,10 +59,8 @@ public class LineCompare {
         System.out.println("The length of Line1 is" + lineLength1);
         System.out.println("The length of line2 is " + lineLength2);
 
-        if (lineLength1 == lineLength2) {
-            System.out.println("Two Lines are Equal");
-        } else {
-            System.out.println("Two Lines are Not Equal");
-        }
+        compareTo(lineLength1, lineLength2);
+
     }
 }
+
